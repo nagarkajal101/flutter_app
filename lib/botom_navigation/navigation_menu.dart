@@ -14,7 +14,7 @@ class NavigationMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final navController = Get.put(NavigationController());
-    // Inject shared BudgetController here
+    
     final amountController = Get.put(AmountController());
 
     return Scaffold(
@@ -68,7 +68,6 @@ class NavigationController extends GetxController{
 // Screens for each destination
   final List<Widget> screens = [
     const HomeScreen(),
-// WeddingCountdownScreen(),
     const ChecklistScreen(),
     VenueScreen(),
     CateringScreen(),
