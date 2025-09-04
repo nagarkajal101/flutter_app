@@ -16,12 +16,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-// 👇 ADD THESE STATE VARIABLES
+// STATE VARIABLES
   String? bride;
   String? groom;
   DateTime? weddingDate;
 
-  // 👇 FUNCTION TO OPEN POPUP
+  // FUNCTION TO OPEN POPUP
   void _openSetupDialog() async {
     final result = await showDialog(
       context: context,
@@ -131,17 +131,17 @@ actions: [IconButton(onPressed: (){
               ),
             ),
           ),
-          /// Background Image (pastel floral)
+          //Logo image (couple)
           Positioned.fill(
             child: Opacity(
-              opacity: 1, // faint background effect
+              opacity: 1, 
               child: Image.asset(
                 "assets/images/wedding-couple.png", 
                 fit: BoxFit.contain,
               ),
             ),
           ),
-          // 👇 ADD THIS LOGIC
+          
           if (bride != null && groom != null && weddingDate != null)
             Align(
               alignment: Alignment.center,
