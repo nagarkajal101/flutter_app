@@ -82,12 +82,12 @@ class _CateringScreenState extends State<CateringScreen> {
       ),
       body: Stack(
         children:[
-      /// Background Image (pastel floral)
+      /// Background Image 
       Positioned.fill(
       child: Opacity(
-      opacity: 0.25, // faint background effect
+      opacity: 0.25, 
         child: Image.asset(
-          "assets/images/floral_bg.png", // <-- add your floral image in assets
+          "assets/images/floral_bg.png", 
           fit: BoxFit.cover,
         ),
       ),
