@@ -1,152 +1,3 @@
-/*import 'package:flutter/material.dart';
-
-class Venue {
-  final String name;
-  final int total_amount; // in INR
-  final int capacity;
-
-  Venue({required this.name, required this.total_amount, required this.capacity});
-}
-
-class VenueScreen extends StatefulWidget {
-  @override
-  _VenueScreenState createState() => _VenueScreenState();
-}
-
-class _VenueScreenState extends State<VenueScreen> {
-  List<Venue> venues = [
-    Venue(name: "Grand Palace Hall", total_amount: 150000, capacity: 500),
-    Venue(name: "Royal Banquet", total_amount: 80000, capacity: 300),
-    Venue(name: "Sunset Garden", total_amount: 60000, capacity: 200),
-    Venue(name: "City View Rooftop", total_amount: 100000, capacity: 350),
-    Venue(name: "Ocean Pearl Resort", total_amount: 200000, capacity: 700),
-    Venue(name: "Classic Community Hall", total_amount: 40000, capacity: 150),
-  ];
-
-  String sortBy = "None";
-  int? minCapacity;
-  int? maxBudget;
-
-  List<Venue> get filteredVenues {
-    List<Venue> filtered = venues;
-
-    if (minCapacity != null) {
-      filtered = filtered.where((v) => v.capacity >= minCapacity!).toList();
-    }
-    if (maxBudget != null) {
-      filtered = filtered.where((v) => v.total_amount <= maxBudget!).toList();
-    }
-
-    if (sortBy == "Budget (Low-High)") {
-      filtered.sort((a, b) => a.total_amount.compareTo(b.total_amount));
-    } else if (sortBy == "Budget (High-Low)") {
-      filtered.sort((a, b) => b.total_amount.compareTo(a.total_amount));
-    } else if (sortBy == "Capacity") {
-      filtered.sort((a, b) => b.capacity.compareTo(a.capacity));
-    }
-
-    return filtered;
-  }
-
-  void _showFilterDialog() {
-    TextEditingController capacityController = TextEditingController();
-    TextEditingController budgetController = TextEditingController();
-
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        title: Text("Filter Venues"),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            TextField(
-              controller: capacityController,
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(labelText: "Min Capacity"),
-            ),
-            TextField(
-              controller: budgetController,
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(labelText: "Max Budget"),
-            ),
-            DropdownButton<String>(
-              isExpanded: true,
-              value: sortBy,
-              items: [
-                "None",
-                "Budget (Low-High)",
-                "Budget (High-Low)",
-                "Capacity"
-              ]
-                  .map((val) =>
-                  DropdownMenuItem(value: val, child: Text(val)))
-                  .toList(),
-              onChanged: (val) {
-                setState(() => sortBy = val!);
-              },
-            )
-          ],
-        ),
-        actions: [
-          TextButton(
-              onPressed: () {
-                setState(() {
-                  minCapacity = capacityController.text.isNotEmpty
-                      ? int.parse(capacityController.text)
-                      : null;
-                  maxBudget = budgetController.text.isNotEmpty
-                      ? int.parse(budgetController.text)
-                      : null;
-                });
-                Navigator.pop(context);
-              },
-              child: Text("Apply"))
-        ],
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Venues"),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.filter_list),
-            onPressed: _showFilterDialog,
-          ),
-        ],
-      ),
-      body: ListView.builder(
-        itemCount: filteredVenues.length,
-        itemBuilder: (context, index) {
-          final venue = filteredVenues[index];
-          return Card(
-            margin: EdgeInsets.all(10),
-            child: ListTile(
-              title: Text(venue.name,
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text(
-                  "Budget: ₹${venue.total_amount} | Capacity: ${venue.capacity}"),
-              trailing: ElevatedButton(
-                onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text("${venue.name} selected")),
-                  );
-                },
-                child: Text("Select"),
-              ),
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
-
- */
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -155,7 +6,7 @@ import '../../controller/amount_controller.dart';
 
 class Venue {
   final String name;
-  final int budget; // in INR
+  final int budget; 
   final int capacity;
 
   Venue({required this.name, required this.budget, required this.capacity});
@@ -217,12 +68,12 @@ class _VenueScreenState extends State<VenueScreen> {
       ),
       body: Stack(
         children:[
-      /// Background Image (pastel floral)
+      /// Background Image
       Positioned.fill(
       child: Opacity(
-      opacity: 0.25, // faint background effect
+      opacity: 0.25, 
         child: Image.asset(
-          "assets/images/floral_bg.png", // <-- add your floral image in assets
+          "assets/images/floral_bg.png", 
           fit: BoxFit.cover,
         ),
       ),
