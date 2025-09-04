@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "554476651569",
+    "project_id": "everafter-9a945",
+    "storage_bucket": "everafter-9a945.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554476651569:android:dc0a4ce0fe59c1ff188110",
+        "android_client_info": {
+          "package_name": "com.example.ever_after"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554476651569-1vj0s77sutl8u33r2tfrc9lqsrinpp6j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ever_after",
+            "certificate_hash": "11dc91172e191edc368df22de35b4e8c6b1d8d28"
+          }
+        },
+        {
+          "client_id": "554476651569-4cqsr40p6n9167o53q9e6hqul0onfn3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5zbWtQvo6hsJfJWF4WC-XwX_8JC_S_7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554476651569-4cqsr40p6n9167o53q9e6hqul0onfn3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
