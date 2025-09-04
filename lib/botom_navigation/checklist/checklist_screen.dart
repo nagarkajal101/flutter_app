@@ -125,7 +125,7 @@ class _ChecklistScreenState extends State<ChecklistScreen> {
       child: Opacity(
       opacity: 0.25, // faint background effect
         child: Image.asset(
-          "assets/images/floral_bg.png", // <-- add your floral image in assets
+          "assets/images/floral_bg.png", 
           fit: BoxFit.cover,
         ),
       ),
@@ -158,7 +158,8 @@ class _ChecklistScreenState extends State<ChecklistScreen> {
 
             /// Checklist List
             Expanded(
-              child: SlidableAutoCloseBehavior( // 👈 ensures only one stays open
+              child: SlidableAutoCloseBehavior( 
+                // ensure only one stays open
                 child: ListView.builder(
                   padding: const EdgeInsets.all(16),
                   itemCount: _checklist.length,
