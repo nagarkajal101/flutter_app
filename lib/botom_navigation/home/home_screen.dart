@@ -126,7 +126,7 @@ actions: [IconButton(onPressed: (){
             child: Opacity(
               opacity: 0.15, // faint background effect
               child: Image.asset(
-                "assets/images/pastel_pink_flower_background.jpeg", // <-- add your floral image in assets
+                "assets/images/pastel_pink_flower_background.jpeg", 
                 fit: BoxFit.cover,
               ),
             ),
@@ -136,7 +136,7 @@ actions: [IconButton(onPressed: (){
             child: Opacity(
               opacity: 1, // faint background effect
               child: Image.asset(
-                "assets/images/wedding-couple.png", // <-- add your floral image in assets
+                "assets/images/wedding-couple.png", 
                 fit: BoxFit.contain,
               ),
             ),
