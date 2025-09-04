@@ -46,13 +46,13 @@ class _BudgetSuggestionScreenState extends State<BudgetSuggestionScreen> {
       ),
       body: Stack(
         children: [
-      /// Background Image (pastel floral)
+      /// Background Image
       Positioned.fill(
       child: Opacity(
-      opacity: 0.15, // faint background effect
+      opacity: 0.15, 
         child: Image.asset(
-          "assets/images/pastel_pink_flower_background.jpeg", // <-- add your floral image in assets
-          fit: BoxFit.cover,
+          "assets/images/pastel_pink_flower_background.jpeg", 
+          fit: BoxFit.contain,
         ),
       ),
     ),
